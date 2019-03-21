@@ -4,28 +4,52 @@ $main-color:  #6959b7;
 $light-color: #fff;
 $black-color:   #1b1d1e;
 
-body {
-  margin: 0;
+$main-font:     ProximaNova-Bold;
+$custom-font:   ProximaNovaCond-Light;
+
+@font-face {
+  font-family: 'Awesome-Font';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ProximaNova-Bold'), local('ProximaNova-Bold'), url(fonts/ProximaNova-Bold.woff) format('woff');
 }
 
+body {
+  margin: 0;
+  font-family: $main-font;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  position: relative;
+  position: absolute;
   z-index: 2;
+  width: 100%;
   
   &__logo {
     margin-left: 4rem;
+
+    @media (max-width: 600px) {
+       margin-left: 1rem;
+    }
   }
 
 }
 
 .navbar {
+  display: flex;
   color: $light-color;
+  align-items: center;
+  margin-right: 4rem;
+  
+  @media (max-width: 600px) {
+    margin-right: 1rem;
+ }
   
   &__hamburguer {
+    display: flex;
+    align-items: center;
 
     &-btn {
       background-color: transparent;
@@ -34,30 +58,192 @@ body {
     }
 
     &-ico {
-      width: 3.5rem;
+      width: 2rem;
       background: $light-color;
       content: "";
       display: block;
-      height: .3rem;
+      height: .2rem;
       margin-bottom: .5rem;
     }
   }
+
+  &__text {
+    margin-right: 1rem;
+    display: inline;
+  }
 }
 
-
 .background {
-  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-    &__item {
-      img{
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-      }
 
+  &__item {
+    img{
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+
+      @media (max-width: 600px) {
+        height: 50rem;
+     }
     }
+
+  }
+
+  &__title {
+    font-size: 5rem;
+    position: absolute;
+    top: 15rem;
+    color: $light-color;
+    margin-left: 4rem;
+    width: 50%;
+    line-height: .8;
+
+    @media (max-width: 600px) {
+      font-size: 4rem;
+   }
+  }
+
+
+  &__button {
+    position: absolute;
+    top: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+
+    @media (max-width: 600px) {
+      top: 45rem;
+   }
+
+    button {
+      background: transparent;
+      border: .2rem solid $light-color;
+      padding: 1rem;
+      width: 10rem;
+      color: $light-color;
+      cursor: pointer;      
+    }
+
+  }
+
+}
+
+.introduction {
+  &__paragraph {
+    font-size: 1.5rem;
+    padding: 5rem 9rem;
+    text-align: center;
+
+    @media (max-width: 600px) {
+      padding: 1rem;
+   }
+  }
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  @media (max-width: 600px) {
+    display: block;
+ }
+    &__icon {
+
+      img {
+        background: $main-color;
+        padding: 1rem;
+        border-radius: 5rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        margin-top: -2rem;
+        margin-left: 4rem;
+      }
+    }
+
+    &__item {
+      margin-bottom: 3rem;
+    }
+}
+
+.services {
+  &__item {
+    display: flex;
+
+    @media (max-width: 600px) {
+      flex-direction: column-reverse;
+   }
+  }
+
+  &__paragraph,
+  &__image {
+    width: 50%;
+  }
+
+  &__paragraph {
+    font-size: $main-font;
+    padding: 5rem;
+    text-align: center;
+  }
+
+  &__image {
+    img {
+      height: 26.8rem;
+
+      @media (max-width: 600px) {
+         height: 10rem;
+     }
+    }
+  }
+}
+
+.section {
+  background: $main-color;
+  height: 10rem;
+  display: flex;
+
+  @media (max-width: 600px) {
+    display: block;
+    height: auto;
+ }
+
+  &__paragraph {
+    color: $light-color;
+    padding: 3rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7rem;
+
+    @media (max-width: 600px) {
+      margin-right: 0;
+   }
+   
+    button {
+      cursor: pointer;
+      background: transparent;
+      border: .2rem solid $light-color;
+      padding: 1rem;
+      width: 10rem;
+      color: $light-color;
+    }
+
+  }
+}
+
+footer {
+  background: $main-color;
+  height: 10rem;
 }

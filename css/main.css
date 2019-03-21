@@ -1,31 +1,52 @@
+@font-face {
+  font-family: 'Awesome-Font';
+  font-style: normal;
+  font-weight: 400;
+  src: local("ProximaNova-Bold"), local("ProximaNova-Bold"), url(fonts/ProximaNova-Bold.woff) format("woff"); }
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: ProximaNova-Bold; }
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  position: relative;
-  z-index: 2; }
+  position: absolute;
+  z-index: 2;
+  width: 100%; }
   .header__logo {
     margin-left: 4rem; }
+    @media (max-width: 600px) {
+      .header__logo {
+        margin-left: 1rem; } }
 
 .navbar {
-  color: #fff; }
-  .navbar__hamburguer-btn {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer; }
-  .navbar__hamburguer-ico {
-    width: 3.5rem;
-    background: #fff;
-    content: "";
-    display: block;
-    height: .3rem;
-    margin-bottom: .5rem; }
+  display: flex;
+  color: #fff;
+  align-items: center;
+  margin-right: 4rem; }
+  @media (max-width: 600px) {
+    .navbar {
+      margin-right: 1rem; } }
+  .navbar__hamburguer {
+    display: flex;
+    align-items: center; }
+    .navbar__hamburguer-btn {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer; }
+    .navbar__hamburguer-ico {
+      width: 2rem;
+      background: #fff;
+      content: "";
+      display: block;
+      height: .2rem;
+      margin-bottom: .5rem; }
+  .navbar__text {
+    margin-right: 1rem;
+    display: inline; }
 
 .background {
-  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
@@ -35,5 +56,114 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%; }
+    @media (max-width: 600px) {
+      .background__item img {
+        height: 50rem; } }
+  .background__title {
+    font-size: 5rem;
+    position: absolute;
+    top: 15rem;
+    color: #fff;
+    margin-left: 4rem;
+    width: 50%;
+    line-height: .8; }
+    @media (max-width: 600px) {
+      .background__title {
+        font-size: 4rem; } }
+  .background__button {
+    position: absolute;
+    top: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem; }
+    @media (max-width: 600px) {
+      .background__button {
+        top: 45rem; } }
+    .background__button button {
+      background: transparent;
+      border: 0.2rem solid #fff;
+      padding: 1rem;
+      width: 10rem;
+      color: #fff;
+      cursor: pointer; }
+
+.introduction__paragraph {
+  font-size: 1.5rem;
+  padding: 5rem 9rem;
+  text-align: center; }
+  @media (max-width: 600px) {
+    .introduction__paragraph {
+      padding: 1rem; } }
+
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%; }
+  @media (max-width: 600px) {
+    .highlights {
+      display: block; } }
+  .highlights__icon img {
+    background: #6959b7;
+    padding: 1rem;
+    border-radius: 5rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: -2rem;
+    margin-left: 4rem; }
+  .highlights__item {
+    margin-bottom: 3rem; }
+
+.services__item {
+  display: flex; }
+  @media (max-width: 600px) {
+    .services__item {
+      flex-direction: column-reverse; } }
+.services__paragraph, .services__image {
+  width: 50%; }
+.services__paragraph {
+  font-size: ProximaNova-Bold;
+  padding: 5rem;
+  text-align: center; }
+.services__image img {
+  height: 26.8rem; }
+  @media (max-width: 600px) {
+    .services__image img {
+      height: 10rem; } }
+
+.section {
+  background: #6959b7;
+  height: 10rem;
+  display: flex; }
+  @media (max-width: 600px) {
+    .section {
+      display: block;
+      height: auto; } }
+  .section__paragraph {
+    color: #fff;
+    padding: 3rem; }
+  .section__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7rem; }
+    @media (max-width: 600px) {
+      .section__button {
+        margin-right: 0; } }
+    .section__button button {
+      cursor: pointer;
+      background: transparent;
+      border: 0.2rem solid #fff;
+      padding: 1rem;
+      width: 10rem;
+      color: #fff; }
+
+footer {
+  background: #6959b7;
+  height: 10rem; }
 
 /*# sourceMappingURL=main.css.map */
