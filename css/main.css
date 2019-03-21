@@ -1,0 +1,39 @@
+body {
+  margin: 0; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2; }
+  .header__logo {
+    margin-left: 4rem; }
+
+.navbar {
+  color: #fff; }
+  .navbar__hamburguer-btn {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer; }
+  .navbar__hamburguer-ico {
+    width: 3.5rem;
+    background: #fff;
+    content: "";
+    display: block;
+    height: .3rem;
+    margin-bottom: .5rem; }
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+  .background__item img {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; }
+
+/*# sourceMappingURL=main.css.map */
